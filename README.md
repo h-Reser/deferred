@@ -3,6 +3,7 @@
 [![npm version](https://badge.fury.io/js/%40h-reser%2Fdeferred.svg)](https://badge.fury.io/js/%40h-reser%2Fdeferred)
 [![dependencies Status](https://david-dm.org/h-Reser/deferred/status.svg)](https://david-dm.org/h-Reser/deferred)
 [![devDependencies Status](https://david-dm.org/h-Reser/deferred/dev-status.svg)](https://david-dm.org/h-Reser/deferred?type=dev)
+
 A lightweight deferred implementation with Typescript support, inspired by jQuery and based on Javascript's Promise.
 
 ## Usage
