@@ -1,5 +1,5 @@
-import Deferred from "..";
-import { expect } from "chai";
+const Deferred = require("..").default;
+const expect = require('chai').expect;
 
 describe("Deferred", () => {
   it("should have a promise property which is a Promise", () => {
