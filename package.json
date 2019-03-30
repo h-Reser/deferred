@@ -1,0 +1,38 @@
+{
+  "name": "@h-reser/deferred",
+  "version": "1.0.0",
+  "description": "A lightweight deferred implementation with Typescript support, inspired by jQuery and based on Javascript's Promise.",
+  "main": "./dist/index.js",
+  "types": "./typings/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build && npm run test",
+    "test": "nyc mocha -r ts-node/register test/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h-Reser/deferred.git"
+  },
+  "keywords": [
+    "promise",
+    "async",
+    "deferred",
+    "future",
+    "typescript"
+  ],
+  "author": "Heinz Reser <heinz.reser@gmail.com> (https://github.com/h-Reser)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/h-Reser/deferred/issues"
+  },
+  "homepage": "https://github.com/h-Reser/deferred#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.1"
+  }
+}
