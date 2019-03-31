@@ -1,4 +1,4 @@
-# @h-Reser/deferred
+# @h-reser/deferred
 [![Build Status](https://travis-ci.com/h-Reser/deferred.png?branch=master)](https://travis-ci.com/h-Reser/deferred)
 [![npm version](https://badge.fury.io/js/%40h-reser%2Fdeferred.svg)](https://badge.fury.io/js/%40h-reser%2Fdeferred)
 [![dependencies Status](https://david-dm.org/h-Reser/deferred/status.svg)](https://david-dm.org/h-Reser/deferred)
@@ -6,9 +6,15 @@
 
 A lightweight deferred implementation with Typescript support, inspired by jQuery and based on Javascript's Promise.
 
+## Installation
+
+```
+npm i @h-reser/deferred
+```
+
 ## Usage
 ```
-const Deferred = require("../deferred").default;
+import Deferred from "@h-reser/deferred";
 
 // Create deferred object
 const d = new Deferred();
