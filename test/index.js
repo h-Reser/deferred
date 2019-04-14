@@ -71,3 +71,37 @@ describe("Deferred.catch", () => {
       });
   });
 });
+
+describe("Deferred.finally", () => {
+
+  it("should works as Promise.finally() when resolving", async () => {
+    let flag = void 0;
+    const promise = new Promise(resolve => {
+      const d = new Deferred();
+      d
+        .finally(() => {
+          flag = true;
+          resolve(true);
+        });
+      d.resolve();
+    });
+    await promise;
+    expect(flag).to.be.true;
+  });
+
+  it("should works as Promise.finally() when rejecting", async () => {
+    let flag = void 0;
+    const promise = new Promise(resolve => {
+      const d = new Deferred();
+      d
+        .finally(() => {
+          flag = true;
+          resolve(true);
+        });
+      d.reject();
+    });
+    await promise;
+    expect(flag).to.be.true;
+  });
+
+});
