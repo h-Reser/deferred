@@ -1,14 +1,26 @@
 class Deferred {
 
-  public promise: Promise<any>;
-  public resolve: Function = () => { };
-  public reject: Function = () => { };
+  public isRejected: boolean = false;
+  public isResolved: boolean = false;
+  public promise: Promise<unknown>;
+  private _resolve: Function = () => { };
+  private _reject: Function = () => { };
 
   constructor() {
     this.promise = new Promise((resolve, reject) => {
-      this.resolve = resolve;
-      this.reject = reject;
+      this._resolve = resolve;
+      this._reject = reject;
     });
+  }
+
+  public reject(value?: unknown) {
+    this.isRejected = true;
+    this._reject(value);
+  }
+
+  public resolve(value?: unknown) {
+    this.isResolved = true;
+    this._resolve(value);
   }
 
   public then(cb: (value: any) => any): Deferred {
@@ -22,10 +34,16 @@ class Deferred {
 
   public catch(cb: (value: any) => any): Deferred {
     this.promise
-      .then(() => { })
       .catch((err) => {
         cb(err);
       });
+    return this;
+  }
+
+  public finally(cb: () => any): Deferred {
+    this.promise
+      .then(cb)
+      .catch(cb);
     return this;
   }
 
