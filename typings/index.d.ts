@@ -7,9 +7,9 @@ declare class Deferred {
     constructor();
     reject(value?: unknown): void;
     resolve(value?: unknown): void;
-    then(cb: (value: any) => any): Deferred;
-    catch(cb: (value: any) => any): Deferred;
-    finally(cb: () => any): Deferred;
+    then(cb: (value: unknown) => unknown): Deferred;
+    catch(cb: (value: unknown) => unknown): Deferred;
+    finally(cb: () => unknown): Deferred;
 }
 export default Deferred;
 //# sourceMappingURL=index.d.ts.map

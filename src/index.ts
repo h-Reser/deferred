@@ -23,7 +23,7 @@ class Deferred {
     this._resolve(value);
   }
 
-  public then(cb: (value: any) => any): Deferred {
+  public then(cb: (value: unknown) => unknown): Deferred {
     this.promise
       .then((res) => {
         cb(res);
@@ -32,7 +32,7 @@ class Deferred {
     return this;
   }
 
-  public catch(cb: (value: any) => any): Deferred {
+  public catch(cb: (value: unknown) => unknown): Deferred {
     this.promise
       .catch((err) => {
         cb(err);
@@ -40,7 +40,7 @@ class Deferred {
     return this;
   }
 
-  public finally(cb: () => any): Deferred {
+  public finally(cb: () => unknown): Deferred {
     this.promise
       .then(cb)
       .catch(cb);
