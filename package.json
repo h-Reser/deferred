@@ -9,8 +9,8 @@
     "clean": "rm -rf dist && rm -rf typings",
     "dev": "babel-node ./src/index.ts --extensions '.js,.ts'",
     "emit-types": "tsc",
-    "prepublishOnly": "npm run test",
-    "test": "npm run build && npm run emit-types && nyc mocha",
+    "prepublishOnly": "npm run test && npm run emit-types",
+    "test": "npm run build && nyc mocha",
     "uninstall": "rm -rf node_modules && rm -rf package-lock.json && npm run clean"
   },
   "repository": {
@@ -22,7 +22,8 @@
     "async",
     "deferred",
     "future",
-    "typescript"
+    "typescript",
+    "finally"
   ],
   "author": "Heinz Reser <heinz.reser@gmail.com> (https://github.com/h-Reser)",
   "license": "MIT",
