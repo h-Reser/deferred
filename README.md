@@ -36,6 +36,9 @@ d
   })
   .catch((e) => {
     console.error(e + " :(");
+  })
+  .finally(() => {
+    console.log("Thanks for playing!");
   });
 
 // Execute logic
