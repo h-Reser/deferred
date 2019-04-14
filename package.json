@@ -23,7 +23,9 @@
     "deferred",
     "future",
     "typescript",
-    "finally"
+    "finally",
+    "Promise.finally()",
+    "es2015"
   ],
   "author": "Heinz Reser <heinz.reser@gmail.com> (https://github.com/h-Reser)",
   "license": "MIT",
