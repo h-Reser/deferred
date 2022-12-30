@@ -41,7 +41,7 @@
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-typescript": "^7.3.3",
     "chai": "^4.2.0",
-    "mocha": "^6.0.2",
+    "mocha": "^10.2.0",
     "nyc": "^13.3.0",
     "typescript": "^3.4.1"
   }
